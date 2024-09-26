@@ -1,0 +1,132 @@
+aniamls
+
+import java.util.Date;
+public class Animal {
+    // Create a static int that keep track of the number  of aniamls created
+    static int numOFAnimals = 0;
+
+    // create a constructor for our new Animal class
+    public Animal() {
+        numOFAnimals++;
+    }
+
+    // create a constructor that accepts a name
+    public Animal(String aName) {
+        this.animalName = aName;
+    }
+
+    // Create a few attributes (fields) that we need
+    // Sex will be 'male' or 'female'
+    private String sex = "";
+    // age will be in years
+    private int age = 0;
+    // and weight will be in pounds
+    private int weight = 0;
+    // a unique ID for each animal
+    private String animalID = "";
+    // animal names come from a text file called animalNames.txt
+    private String animalName ="";
+    // animal birthdate.
+    private Date animalbirthdate;
+    // animal color
+    private String animalcolor = "";
+    // origin zoo
+    private String animalorign = "";
+    // arrival date
+    private Date animalarrivaldate;
+
+
+    // create getters and setters
+
+    public int getAge() {
+        return age;
+
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getAnimalID() {return animalID;}
+    public void setAnimalID(String animalID) { this.animalID = animalID;}
+
+    public String getAnimalName() {return animalName;}
+    public void SetAnimalName(String animalName) {this.animalName = animalName;}
+
+    public Date getAnimalbirthdate() {return animalbirthdate;}
+    public void  setAnimalbirthdate(Date animalbirthdate) { this.animalbirthdate = animalbirthdate;}
+
+    public String getGetanimalcolor() {return animalcolor;}
+    public void getanimalcolor(String animalcolor) {this.animalcolor = animalcolor;}
+
+    public String getanimalorigin() {return animalorign;}
+    public void getanimalorigin(String animalorign) {this.animalorign = animalorign;}
+
+    public Date getAnimalarrivaldate() {return animalarrivaldate;}
+    public void getAnimalarrivaldate(Date animalarrivaldate) {this.animalarrivaldate = animalarrivaldate;}
+
+
+    }
+}
+
+hyena 
+
+public class Hyena extends Animal {
+// create a static int that keeps track of the number of hyenas created.
+static int numofhyenas = 0;
+
+// create a constructor
+    public Hyena(String somename) {
+        super(somename);
+        numofhyenas++;
+    }
+
+
+}
+
+app
+
+// App.java
+// AS 9/26/24
+// Driver File for the oo midterm program.
+
+public class App {
+    public static void main(String[] args) {
+
+        System.out.printf("Hello and welcome!");
+
+        Animal myanimal = new Animal();
+        myanimal.SetAnimalName("my first animal");
+        System.out.println("\n the name of the new animal is: " + myanimal.getAnimalName());
+
+        Animal anotheranimal = new Animal("zig");
+        System.out.println("\n the name of the second animal is: " + anotheranimal.getAnimalName());
+
+        System.out.println("\n number of animals is: " + Animal.numOFAnimals);
+
+        // Create a hyena with a name
+        Animal anewhyena = new Animal("");
+
+        System.out.println(" the new hyena name is: " + anewhyena.getAnimalName());
+
+
+    }
+}
+
+
